@@ -31,9 +31,9 @@ def region_of_interest(canny):
         (100, height),
         (width//2, height//2),
         (width-100, height),
-    ]], np.int32)
+    ]], dtype=np.int32)
     
-    cv2.fillPoly(mask, triangle, 255)
+    cv2.fillPoly(mask, triangle, 255) # type: ignore
     # Apply the mask to the canny image
     masked_image = cv2.bitwise_and(canny, mask)
     return masked_image

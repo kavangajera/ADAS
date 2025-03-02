@@ -387,7 +387,7 @@ while True:
                     show_red_light_warning = True
         
         if show_red_light_warning:
-            cv2.putText(frame, warning_text, (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, warning_color, 2)
+            cv2.putText(frame, warning_text, (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, warning_color, 2) # type: ignore
             
             # Place brake warning icon in the bottom right
             h, w = frame.shape[:2]
