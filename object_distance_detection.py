@@ -27,7 +27,7 @@ FOCAL_LENGTH = 700  # Approximate focal length (needs calibration)
 def capture_screen():
     with mss.mss() as sct:
         # Capture a wider and taller area to see more of the environment
-        monitor = {"top": 0, "left": 0, "width": 1024, "height": 768}  # Increased capture area
+        monitor = {"top": 40, "left": 0, "width": 800, "height": 600}  # Increased capture area
         screenshot = sct.grab(monitor)
         img = np.array(screenshot)
         img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)  # Convert from BGRA to BGR
